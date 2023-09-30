@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { product } from './models/product.model';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   imgParent:string = '';
+  showImg= true;
+
   onLoaded(img: string) {
     console.log('log Padre', img)
+  }
+
+  toogleImg(){
+    this.showImg = !this.showImg;
   }
 }
